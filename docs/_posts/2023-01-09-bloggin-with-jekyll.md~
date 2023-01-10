@@ -1,0 +1,18 @@
+---
+layout: post
+title: Starting a blog with Jekyll
+author: reyes
+---
+
+Before starting this post, I'll test some unique components to check how it looks like. So, let me first check how the images are displayed on this site.
+
+![Some Image](https://w.wallhaven.cc/full/l8/wallhaven-l83o92.jpg)
+
+What about trying to display some code?
+
+---
+
+How about using `console.log` on [javascript](#)
+
+> Testing block quote
+

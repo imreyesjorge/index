@@ -12,7 +12,7 @@ title: Home
 <main class="home_main">
   <h3>Projects</h3>
   {% for project in site.data.projects %}
-  <a href="{{ project.link }}">
+  <a href="{{ project.link }}" class="clean">
     <div class="project">
       <h3>{{ project.name }}</h3>
       <p>{{ project.desc }}</p>
