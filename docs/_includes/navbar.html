@@ -1,0 +1,10 @@
+<nav>
+  <a href="/"><h3>Jorge Reyes</h3></a>
+  <ul>
+    {% for item in site.data.nav %}
+      <a href="{{ item.link }}">
+        <li>{{ item.name }}</li>
+      </a>
+    {% endfor %}
+  </ul>
+</nav>
