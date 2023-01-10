@@ -3,4 +3,11 @@ layout: default
 title: Blog
 ---
 
-<p style="color: #EE6C4D; margin-top: 3rem; padding: 1rem; background-color: #EE6C4D33; border-radius: 8px; text-align: center;">Blog under development</p>
+<h3>Latest Posts</h3>
+<ul class="posts_container">
+  {% for post in site.posts %}
+  <li class="posts_item">
+    <a href="{{ post.url }}">{{ post.title }} <span>– {{ post.date | date_to_string }}</span></a>
+  </li>
+  {% endfor %}
+</ul>
