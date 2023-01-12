@@ -1,5 +1,7 @@
 <footer>
   {% for social in site.data.socials %}
-    <a href="{{ social.link }}" class="clean">{{ social.title }}</a>
+  <a href="{{ social.link }}"
+    ><div class="icon icon_{{ social.icon }}" alt="{{ social.icon }} icon"></div
+  ></a>
   {% endfor%}
 </footer>

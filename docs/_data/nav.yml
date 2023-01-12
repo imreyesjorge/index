@@ -1,2 +1,6 @@
+- name: RSS
+  icon: rss
+  link: "#"
 - name: Blog
+  icon: blog
   link: /blog

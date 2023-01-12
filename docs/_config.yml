@@ -1,3 +1,4 @@
 # Set-up this later to use 'reyes.cool' domain
 domain: reyes.cool
 url: https://reyes.cool
+markdown: kramdown

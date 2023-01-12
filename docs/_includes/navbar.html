@@ -1,14 +1,14 @@
 <nav>
-  {% if page.url != "/" %}<a href="/" class="clean"><h3>Jorge Reyes</h3></a>{% endif %}
-  {% if page.url == "/" %}<div></div>{% endif %}
+  {% if page.url != "/" %}<a href="/" class="clean"><h3>Jorge Reyes</h3></a>{%
+  endif %} {% if page.url == "/" %}
+  <div></div>
+  {% endif %}
   <ul>
-    <li style="color: #777; cursor: default;">
-      RSS
-    </li>
     {% for item in site.data.nav %}
     <li>
-      <a href="{{ item.link }}" class="clean">
+      <a href="{{ item.link }}" class="clean nav_item">
         {{ item.name }}
+        <div class="icon icon_{{ item.icon }}"></div>
       </a>
     </li>
     {% endfor %}

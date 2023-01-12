@@ -2,11 +2,14 @@
 layout: default
 title: Home
 ---
+
 <header class="home_header">
   <h4>Jorge Reyes</h4>
-  <small class="title">Intern @ <span>Legal Karma</span></small>
-  
-  <p class="personal_quote">Learning how to be a better person and developer 🌈.</p>
+  <small class="title">Intern @ <span class="glow">Legal Karma</span></small>
+
+  <p class="personal_quote">
+    Learning how to be a better person and developer 🌈.
+  </p>
 </header>
 
 <main class="home_main">
@@ -14,7 +17,7 @@ title: Home
   {% for project in site.data.projects %}
   <a href="{{ project.link }}" class="clean">
     <div class="project">
-      <h3>{{ project.name }}</h3>
+      <h3>{{ project.name }}<div class="icon icon_external"/></h3>
       <p>{{ project.desc }}</p>
     </div>
   </a>
