@@ -20,6 +20,9 @@ h5 {
 body {
   color: #e3e3e3;
   font-family: "Open Sans", sans-serif;
+
+  margin: 0;
+
   background-color: rgb(15, 23, 42);
 
   display: flex;
@@ -33,6 +36,11 @@ nav {
 
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
+  a h3 {
+    margin: 0;
+  }
 }
 
 nav ul {
@@ -222,12 +230,16 @@ hr {
 
 .blog_container {
   color: #bbb;
+
+  margin: 0;
   padding: 1rem;
+
+  h3 {
+    margin: 0;
+  }
 }
 
 .posts_container {
-  margin: 1rem;
-
   display: flex;
   flex-direction: column;
   gap: 10px;
