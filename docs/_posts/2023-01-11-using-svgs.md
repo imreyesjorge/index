@@ -59,6 +59,8 @@ To implement icons using this approach, you gotta create a tag that will serve a
 <div class="icon" />
 ```
 
+> `mask-image` is supported on all browsers, but some require the `-webkit-` prefix, check [can-i-use](https://caniuse.com/?search=mask-image).
+
 What we're doing here is that we're creating a square (or rectangle) with the desired color as the background, leveraging _mask-image_ property to clip the div into the shape of the svg. Thus, gaining control of which color should the svg be.
 
 ## Conclussion
