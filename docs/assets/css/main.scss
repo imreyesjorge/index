@@ -54,6 +54,11 @@ a:link,
 a:visited {
   color: currentcolor;
   text-decoration: none;
+  border-bottom: 1px dotted currentcolor;
+
+  &:hover {
+    color: #5db7de;
+  }
 }
 
 footer {
@@ -290,6 +295,11 @@ hr {
 .clean:link,
 .clean:visited {
   text-decoration: none;
+  border: none;
+
+  &:hover {
+    color: currentColor;
+  }
 }
 
 /* Icons declarations */
@@ -301,48 +311,56 @@ hr {
     width: 15px;
     height: 15px;
     mask-image: url("/assets/svgs/external.svg");
+    -webkit-mask-image: url("/assets/svgs/external.svg");
   }
 
   &_rss {
     width: 15px;
     height: 15px;
     mask-image: url("/assets/svgs/rss.svg");
+    -webkit-mask-image: url("/assets/svgs/rss.svg");
   }
 
   &_blog {
     width: 15px;
     height: 15px;
     mask-image: url("/assets/svgs/blog.svg");
+    -webkit-mask-image: url("/assets/svgs/blog.svg");
   }
 
   &_mastodon {
     width: 20px;
     height: 20px;
     mask-image: url("/assets/svgs/mastodon.svg");
+    -webkit-mask-image: url("/assets/svgs/mastodon.svg");
   }
 
   &_twitter {
     width: 20px;
     height: 20px;
     mask-image: url("/assets/svgs/twitter.svg");
+    -webkit-mask-image: url("/assets/svgs/twitter.svg");
   }
 
   &_linkedin {
     width: 20px;
     height: 20px;
     mask-image: url("/assets/svgs/linkedin.svg");
+    -webkit-mask-image: url("/assets/svgs/linkedin.svg");
   }
 
   &_github {
     width: 20px;
     height: 20px;
     mask-image: url("/assets/svgs/github.svg");
+    -webkit-mask-image: url("/assets/svgs/github.svg");
   }
 
   &_mail {
     width: 15px;
     height: 15px;
     mask-image: url("/assets/svgs/mail.svg");
+    -webkit-mask-image: url("/assets/svgs/mail.svg");
   }
 }
 
