@@ -1,6 +1,6 @@
 - name: RSS
   icon: rss
-  link: "#"
+  link: "/feed.xml"
 - name: Blog
   icon: blog
   link: /blog

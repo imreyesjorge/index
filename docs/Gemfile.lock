@@ -262,8 +262,7 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages (~> 227)
-  jekyll-feed (~> 0.12)
-  rouge (~> 3.26)
+  jekyll-feed
   webrick (~> 1.7)
 
 BUNDLED WITH
