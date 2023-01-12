@@ -55,7 +55,7 @@ To implement icons using this approach, you gotta create a tag that will serve a
   }
 </style>
 
-<!--You can use 'icon' clas to display your icon-->
+<!--You can use 'icon' class to display your icon-->
 <div class="icon" />
 ```
 
