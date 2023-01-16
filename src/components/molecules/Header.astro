@@ -1,0 +1,61 @@
+---
+const { role, company, description } = Astro.props;
+---
+
+<style>
+  header {
+    margin: 2rem 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header > * {
+    margin: 0;
+  }
+
+  h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  small {
+    color: #bbbbbb;
+    font-size: 12px;
+    margin-bottom: 25px;
+
+    display: block;
+  }
+
+  .status {
+    text-align: center;
+    color: #cccccc;
+    padding: 1rem;
+
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+
+    position: relative;
+  }
+
+  .status::before {
+    content: "";
+    width: 15px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.05);
+
+    transform: translate(-50%, -100%);
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+  }
+</style>
+
+<header>
+  <h3>Jorge Reyes</h3>
+  <small>{role} @ <span class="glow">{company}</span></small>
+  <p class="status">{description}</p>
+</header>

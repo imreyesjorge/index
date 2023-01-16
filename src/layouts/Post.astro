@@ -1,0 +1,46 @@
+---
+import "../styles/md.css";
+import MainLayout from "./MainLayout.astro";
+
+const { frontmatter } = Astro.props;
+const published_date = new Date(frontmatter.published_date).toDateString();
+---
+
+<style>
+  header {
+    margin: 2rem 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  header h1,
+  header p {
+    margin: 0;
+  }
+
+  header h1 {
+    text-align: center;
+  }
+
+  header p {
+    color: #888;
+  }
+
+  main {
+    color: #bbb;
+    width: 100%;
+
+    line-height: 180%;
+  }
+</style>
+
+<MainLayout>
+  <header>
+    <h1>{frontmatter.title}</h1>
+    <p>{published_date}</p>
+  </header>
+  <main><slot /></main>
+</MainLayout>

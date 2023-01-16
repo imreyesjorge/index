@@ -1,0 +1,64 @@
+---
+const menuItems = [
+  { name: "RSS", path: "#" },
+  { name: "Blog", path: "/blog" },
+];
+---
+
+<style>
+  nav {
+    width: 100%;
+
+    margin: 10px 0;
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  ul {
+    margin: 0;
+    list-style: none;
+
+    display: flex;
+    gap: 15px;
+  }
+
+  a:link,
+  a:visited {
+    color: currentColor;
+    text-decoration: none;
+  }
+
+  h4 {
+    font-size: 16px;
+    margin: 0;
+  }
+</style>
+
+<nav>
+  {
+    Astro.url.pathname !== "/" ? (
+      <h4>
+        <a href="/" class="no_border">
+          Jorge Reyes
+        </a>
+      </h4>
+    ) : (
+      <div />
+    )
+  }
+  <ul>
+    {
+      menuItems.map((item) => (
+        <li>
+          <a href={item.path} class="no_border">
+            {item.name}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
