@@ -1,6 +1,9 @@
 ---
-layout: post
+layout: ../../layouts/Post.astro
 title: What's SSH?
+author: reyes
+published_date: 2021/12/24
+tag: tech
 ---
 
 Have you wonder how your information is secured when traveling across the internet? **Secure Shell (SSH)** is one of the protocols whose tasks is to secure the data while traveling between two computers. SSH was created to replace Telnet, and other unsecured protocols.

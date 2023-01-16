@@ -1,0 +1,72 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+
+const rawPosts = await Astro.glob("../pages/posts/*.md");
+const allPosts = rawPosts.sort((a, b) => {
+  return (
+    // @ts-ignore
+    new Date(b.frontmatter.published_date) -
+    // @ts-ignore
+    new Date(a.frontmatter.published_date)
+  );
+});
+---
+
+<style>
+  h1 {
+    font-size: 16px;
+
+    margin-bottom: 20px;
+  }
+
+  a:link,
+  a:visited {
+    color: currentColor;
+    text-decoration: none;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  ul li {
+    color: #bbb;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+  }
+
+  ul li:hover {
+    color: white;
+  }
+
+  ul li a span {
+    color: #888;
+
+    font-weight: normal;
+    font-size: 14px;
+  }
+</style>
+
+<MainLayout title="Reyes – Blog">
+  <main>
+    <h1>Latest posts</h1>
+    <ul>
+      {
+        allPosts.map((post) => (
+          <li>
+            <a href={post.url} class="no_border">
+              {post.frontmatter.title}{" "}
+              <span>
+                – {new Date(post.frontmatter.published_date).toDateString()}
+              </span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </main>
+</MainLayout>
