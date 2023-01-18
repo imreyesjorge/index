@@ -2,7 +2,7 @@
 layout: ../../layouts/Post.astro
 title: What's SSH?
 author: reyes
-published_date: 2021/12/24
+pubDate: 2021/12/24
 tag: tech
 ---
 

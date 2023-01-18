@@ -2,7 +2,7 @@
 layout: ../../layouts/Post.astro
 title: What's CORS (Cross-Origin Resource Sharing)?
 author: reyes
-published_date: 2021/02/26
+pubDate: 2021/02/26
 tag: tech
 ---
 

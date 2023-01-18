@@ -5,9 +5,9 @@ const rawPosts = await Astro.glob("../pages/posts/*.md");
 const allPosts = rawPosts.sort((a, b) => {
   return (
     // @ts-ignore
-    new Date(b.frontmatter.published_date) -
+    new Date(b.frontmatter.pubDate) -
     // @ts-ignore
-    new Date(a.frontmatter.published_date)
+    new Date(a.frontmatter.pubDate)
   );
 });
 ---
@@ -61,7 +61,7 @@ const allPosts = rawPosts.sort((a, b) => {
             <a href={post.url} class="no_border">
               {post.frontmatter.title}{" "}
               <span>
-                – {new Date(post.frontmatter.published_date).toDateString()}
+                – {new Date(post.frontmatter.pubDate).toDateString()}
               </span>
             </a>
           </li>
