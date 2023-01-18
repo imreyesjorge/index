@@ -13,7 +13,7 @@ const published_date = new Date(frontmatter.pubDate).toDateString();
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
   }
 
   header h1,
@@ -26,7 +26,11 @@ const published_date = new Date(frontmatter.pubDate).toDateString();
   }
 
   header p {
-    color: #888;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  header small {
+    color: rgba(255, 255, 255, 0.3);
   }
 
   main {
@@ -41,6 +45,7 @@ const published_date = new Date(frontmatter.pubDate).toDateString();
   <header>
     <h1>{frontmatter.title}</h1>
     <p>{published_date}</p>
+    <small title="tag">#{frontmatter.tag}</small>
   </header>
   <main><slot /></main>
 </MainLayout>
