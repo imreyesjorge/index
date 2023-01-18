@@ -3,7 +3,7 @@ import "../styles/md.css";
 import MainLayout from "./MainLayout.astro";
 
 const { frontmatter } = Astro.props;
-const published_date = new Date(frontmatter.published_date).toDateString();
+const published_date = new Date(frontmatter.pubDate).toDateString();
 ---
 
 <style>
@@ -37,7 +37,7 @@ const published_date = new Date(frontmatter.published_date).toDateString();
   }
 </style>
 
-<MainLayout>
+<MainLayout title={frontmatter.title}>
   <header>
     <h1>{frontmatter.title}</h1>
     <p>{published_date}</p>

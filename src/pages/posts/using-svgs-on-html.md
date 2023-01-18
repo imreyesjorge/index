@@ -2,7 +2,7 @@
 layout: ../../layouts/Post.astro
 title: Using SVGs on HTML5 and CSS3
 author: reyes
-published_date: 2023/01/11
+pubDate: 2023/01/11
 tag: tech
 ---
 
