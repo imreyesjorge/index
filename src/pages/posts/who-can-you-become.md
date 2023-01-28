@@ -3,7 +3,7 @@ layout: ../../layouts/Post.astro
 title: Who can you become?
 author: reyes
 pubDate: 2023/01/17
-tag: personal
+tags: ["personal"]
 ---
 
 Modern life demands so much of our attention, from the chaotic movement that our cities see every day to our social media feeds that overwhelm us with a toxic amount of either the bad things happening in our world or the good life that everyone else is living but us.

@@ -3,7 +3,7 @@ layout: ../../layouts/Post.astro
 title: What's CORS (Cross-Origin Resource Sharing)?
 author: reyes
 pubDate: 2021/02/26
-tag: tech
+tags: ["tech", "web"]
 ---
 
 When building a web service that uses the [HTTP protocol](https://developer.mozilla.org/en-US/docs/Web/HTTP) for transmitting [hypermedia](https://en.wikipedia.org/wiki/Hypermedia) documents, we can upload resources to the same server, that way we can use them in the service we're building. In fact, we can't use resources from another server by default, this is restricted by the [same-origin policy](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy).

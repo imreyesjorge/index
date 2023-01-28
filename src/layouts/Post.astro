@@ -3,7 +3,9 @@ import "../styles/md.css";
 import MainLayout from "./MainLayout.astro";
 
 const { frontmatter } = Astro.props;
-const published_date = new Date(frontmatter.pubDate).toDateString();
+const published_date = new Intl.DateTimeFormat("en-US", {
+  dateStyle: "long",
+}).format(new Date(frontmatter.pubDate));
 ---
 
 <style>
@@ -29,8 +31,25 @@ const published_date = new Date(frontmatter.pubDate).toDateString();
     color: rgba(255, 255, 255, 0.8);
   }
 
-  header small {
+  #tags {
+    display: flex;
+    gap: 15px;
+  }
+
+  #tags a:link,
+  #tags a:visited {
     color: rgba(255, 255, 255, 0.3);
+    font-size: 14px;
+
+    border: none;
+
+    transition: 0.2s;
+    cursor: pointer;
+  }
+
+  #tags a:hover,
+  #tags a:hover {
+    color: rgba(255, 255, 255, 0.7);
   }
 
   main {
@@ -45,7 +64,9 @@ const published_date = new Date(frontmatter.pubDate).toDateString();
   <header>
     <h1>{frontmatter.title}</h1>
     <p>{published_date}</p>
-    <small title="tag">#{frontmatter.tag}</small>
+    <section id="tags" aria-label="tags">
+      {frontmatter.tags.map((tag: any) => <a href={`/tags/${tag}`}>#{tag}</a>)}
+    </section>
   </header>
   <main><slot /></main>
 </MainLayout>
