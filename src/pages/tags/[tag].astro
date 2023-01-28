@@ -1,0 +1,82 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+
+export async function getStaticPaths() {
+  return [
+    { params: { tag: "personal" } },
+    { params: { tag: "linux" } },
+    { params: { tag: "web" } },
+    { params: { tag: "sysadmin" } },
+    { params: { tag: "tech" } },
+  ];
+}
+
+const { tag } = Astro.params;
+
+const allPosts = await Astro.glob("../posts/*.md");
+const posts = allPosts.filter((post) => post.frontmatter.tags.includes(tag));
+---
+
+<style>
+  h1 {
+    font-size: 16px;
+
+    margin-bottom: 20px;
+  }
+
+  h1 span {
+    text-decoration: underline;
+  }
+
+  a:link,
+  a:visited {
+    color: currentColor;
+    text-decoration: none;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  ul li {
+    color: #bbb;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+  }
+
+  ul li:hover {
+    color: white;
+  }
+
+  ul li a span {
+    color: #888;
+
+    font-weight: normal;
+    font-size: 14px;
+  }
+</style>
+
+<MainLayout title={`Reyes — ${tag} posts`}>
+  <h1>Read all <span>{tag}</span> posts</h1>
+  <ul>
+    {
+      posts.map((post) => (
+        <li>
+          <a href={post.url} class="no_border">
+            {post.frontmatter.title}{" "}
+            <span>
+              –{" "}
+              {Intl.DateTimeFormat("en-US", {
+                dateStyle: "medium",
+              }).format(new Date(post.frontmatter.pubDate))}
+            </span>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</MainLayout>
