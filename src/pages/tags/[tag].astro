@@ -66,7 +66,7 @@ const posts = allPosts.filter((post) => post.frontmatter.tags.includes(tag));
     {
       posts.map((post) => (
         <li>
-          <a href={post.url} class="no_border">
+          <a href={post.url} rel="prefetch" class="no_border">
             {post.frontmatter.title}{" "}
             <span>
               –{" "}

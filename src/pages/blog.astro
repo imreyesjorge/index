@@ -16,7 +16,8 @@ const allPosts = rawPosts.sort((a, b) => {
 ---
 
 <style>
-  h1 {
+  h1,
+  h2 {
     font-size: 16px;
 
     margin-bottom: 20px;
@@ -59,45 +60,11 @@ const allPosts = rawPosts.sort((a, b) => {
     flex-wrap: wrap;
     gap: 15px;
   }
-
-  .tag:link,
-  .tag:visited {
-    padding: 0.8rem 1.2rem;
-
-    background-color: rgba(255, 255, 255, 0.01);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-
-    transition: 0.2s;
-    position: relative;
-    overflow: hidden;
-    outline: none;
-  }
-
-  .tag:hover,
-  .tag:focus {
-    background-color: rgba(255, 255, 255, 0.05);
-  }
-
-  .tag:focus {
-    border-color: royalblue;
-  }
-
-  .tag::before {
-    content: "";
-    width: 100%;
-    height: 50%;
-    background-color: rgba(0, 0, 0, 0.3);
-
-    position: absolute;
-    top: 50%;
-    left: 0;
-    z-index: -1;
-  }
 </style>
 
 <MainLayout title="Reyes – Blog">
   <main>
+    <h2>Browse by tags</h2>
     <div id="tags">
       {
         tags.map((tag) => (
@@ -112,7 +79,7 @@ const allPosts = rawPosts.sort((a, b) => {
       {
         allPosts.map((post) => (
           <li>
-            <a href={post.url} class="no_border">
+            <a href={post.url} rel="prefetch" class="no_border">
               {post.frontmatter.title}{" "}
               <span>
                 –{" "}
