@@ -1,5 +1,5 @@
 const HomeScreen = () => {
-  return <>New project</>;
+  return <>NextJS project started</>;
 };
 
 export default HomeScreen;
