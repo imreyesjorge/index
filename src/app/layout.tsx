@@ -1,4 +1,5 @@
 import { Open_Sans } from "next/font/google";
+import { Navbar } from "../components/molecules/Navbar";
 import "./styles.scss";
 
 export const metadata = {
@@ -17,7 +18,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={Open_SansFont.className}>
       <body>
-        <div id="main-container">{children}</div>
+        <div id="main-container">
+          <Navbar />
+          <div>{children}</div>
+        </div>
       </body>
     </html>
   );
