@@ -1,5 +1,5 @@
 const BlogScreen = () => {
-  return <>Blog!</>;
+  return <div style={{ textAlign: "center" }}>Work in progress.</div>;
 };
 
 export default BlogScreen;
