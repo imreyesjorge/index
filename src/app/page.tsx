@@ -35,7 +35,7 @@ const HomeScreen = () => {
         <small>
           Software Engineer @{" "}
           <a href="https://www.oneseventech.com/" className="glow">
-            Oneseven
+            Freelancer
           </a>
         </small>
         <div className="thought">
