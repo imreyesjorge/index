@@ -6,6 +6,12 @@ const HomeScreen = () => {
   const PROJECTS = useMemo(() => {
     return [
       {
+        title: "Neorank",
+        summary: "A sleek and minimal version of Hacker Rank",
+        href: "https://neorank.reyes.cool/",
+        id: crypto.randomUUID()
+      },
+      {
         title: "Kosmos",
         summary:
           "Knowledge-focused community aimed to connect people and help them learn and grow.",
