@@ -7,7 +7,7 @@ const HomeScreen = () => {
     return [
       {
         title: "Neorank",
-        summary: "A sleek and minimal version of Hacker Rank",
+        summary: "A sleek and minimal version of Hacker News",
         href: "https://neorank.reyes.cool/",
         id: crypto.randomUUID()
       },
