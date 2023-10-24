@@ -6,10 +6,16 @@ const HomeScreen = () => {
   const PROJECTS = useMemo(() => {
     return [
       {
+        title: "Kosmos Chat",
+        summary: "A chatroom made with typescript and websockets",
+        href: "https://chat.kosmos.community/",
+        id: crypto.randomUUID(),
+      },
+      {
         title: "Neorank",
         summary: "A sleek and minimal version of Hacker News",
         href: "https://neorank.reyes.cool/",
-        id: crypto.randomUUID()
+        id: crypto.randomUUID(),
       },
       {
         title: "Kosmos",
