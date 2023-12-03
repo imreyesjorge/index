@@ -46,8 +46,8 @@ const HomeScreen = () => {
         <h1>Jorge Reyes</h1>
         <small>
           Software Engineer @{" "}
-          <a href="https://www.oneseventech.com/" className="glow">
-            Freelancer
+          <a href="https://www.jetpacklabs.com/" className="glow">
+            Jetpack Labs
           </a>
         </small>
         <div className="thought">
