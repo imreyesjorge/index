@@ -1,15 +1,15 @@
 import { gql } from "graphql-request";
 
 export const allPostsQuery = gql`
-  query Publication {
+  query Publications {
     publication(host: "imreyesjorge.hashnode.dev") {
       isTeam
       title
-      posts(first: 10) {
+      posts(first: 20) {
         edges {
           node {
             title
-            cuid
+            slug
             views
             publishedAt
           }

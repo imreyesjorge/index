@@ -9,7 +9,7 @@ export default async function BlogScreen() {
       <section>
         {queryPosts.map((post) => {
           return (
-            <a href={`#`} key={post.node.cuid}>
+            <a href={`/blog/${post.node.slug}`} key={post.node.slug}>
               <article>
                 <h3>
                   {post.node.title}

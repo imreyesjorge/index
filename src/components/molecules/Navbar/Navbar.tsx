@@ -12,7 +12,7 @@ export const Navbar = () => {
         <li className={pathName === "/" && "active"}>
           <Link href="/">Home</Link>
         </li>
-        <li className={pathName === "/blog" && "active"}>
+        <li className={pathName.includes("/blog") && "active"}>
           <Link href="/blog">Blog</Link>
         </li>
       </ul>
