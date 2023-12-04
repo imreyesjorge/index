@@ -8,8 +8,8 @@ export default async function PostScreen({ params }) {
     <main>
       <section className="blog_post">
         <div className="blog_post_info">
-          <h1>{post.title}</h1>
-          <small>{post.readTimeInMinutes} minutes</small>
+          <h1>{post?.title}</h1>
+          <small>{post?.readTimeInMinutes} minutes</small>
         </div>
         <div
           className="blog_post_content"

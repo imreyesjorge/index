@@ -5,7 +5,7 @@ export const allPostsQuery = gql`
     publication(host: "imreyesjorge.hashnode.dev") {
       isTeam
       title
-      posts(first: 20) {
+      posts(first: 19) {
         edges {
           node {
             title
