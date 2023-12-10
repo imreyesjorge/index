@@ -1,11 +1,9 @@
-import { gql } from "graphql-request";
-
-export const allPostsQuery = gql`
+export const allPostsQuery = `
   query Publications {
     publication(host: "imreyesjorge.hashnode.dev") {
       isTeam
       title
-      posts(first: 19) {
+      posts(first: 20) {
         edges {
           node {
             title

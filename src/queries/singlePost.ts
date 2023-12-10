@@ -1,6 +1,4 @@
-import { gql } from "graphql-request";
-
-export const singlePostQuery = gql`
+export const singlePostQuery = `
   query getPublication($url: String!) {
     publication(host: "imreyesjorge.hashnode.dev") {
       isTeam
