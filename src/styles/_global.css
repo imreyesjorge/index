@@ -1,0 +1,37 @@
+:root {
+  --dark: #080f0f;
+  --border: #1a2d2d;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  color: #edffff;
+
+  font-family: "Roboto", sans-serif;
+
+  max-width: 850px;
+
+  margin: 0 auto;
+  padding: 20px;
+  padding-top: 100px;
+
+  background: var(--dark);
+  background-size: 30px 30px;
+  background-image: radial-gradient(
+    circle,
+    var(--border) 1px,
+    rgba(0, 0, 0, 0) 1px
+  );
+
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+}
