@@ -17,6 +17,7 @@ body {
   font-family: "Roboto", sans-serif;
 
   max-width: 850px;
+  min-height: 100dvh;
 
   margin: 0 auto;
   padding: 20px;
@@ -73,6 +74,8 @@ nav {
 
 header {
   font-weight: 700;
+
+  margin-bottom: 30px;
 
   display: flex;
   flex-direction: column;
@@ -216,6 +219,74 @@ header {
     color: rgb(147, 147, 147);
 
     transition: 0.1s;
+  }
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+
+  .contacts {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+    .contact {
+      color: rgb(211, 211, 211);
+      text-decoration: none;
+
+      padding: 30px;
+
+      background: var(--dark);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+
+      position: relative;
+      overflow: hidden;
+      
+      article * {
+        font-style: normal;
+        position: relative;
+        z-index: 10;
+      }
+
+      svg {
+        color: var(--border);
+
+        width: 80px;
+        height: 80px;
+
+        position: absolute;
+
+        bottom: -15px;
+        left: -15px;
+        z-index: 0;
+      }
+    }
+  }
+}
+
+footer {
+  color: rgb(174, 174, 174);
+  font-size: 14px;
+  font-weight: 300;
+
+  padding: 30px 0;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 20px;
+
+  hr {
+    width: 100%;
+    border-color: rgba(255, 255, 255, 0.1);
   }
 }
 

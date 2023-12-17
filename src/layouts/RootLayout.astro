@@ -1,6 +1,7 @@
 ---
 import "../styles/_global.css";
 import Navbar from "../components/shared/Navbar.astro";
+import Footer from "../components/shared/Footer.astro";
 import { ViewTransitions } from "astro:transitions";
 
 const { pageTitle } = Astro.props;
@@ -23,6 +24,9 @@ const { pageTitle } = Astro.props;
   </head>
   <body>
     <Navbar />
-    <slot />
+    <div style="flex-grow: 1;">
+      <slot />
+    </div>
+    <Footer />
   </body>
 </html>
