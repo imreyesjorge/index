@@ -1,10 +1,9 @@
 ---
 import "../styles/_global.css";
-import Navbar from '../components/shared/Navbar.astro';
-import { ViewTransitions } from 'astro:transitions';
+import Navbar from "../components/shared/Navbar.astro";
+import { ViewTransitions } from "astro:transitions";
 
 const { title } = Astro.props;
-
 ---
 
 <html lang="en">
@@ -24,6 +23,28 @@ const { title } = Astro.props;
   </head>
   <body>
     <Navbar />
+    <header>
+      <h1>Jorge Reyes</h1>
+      <p>
+        Software Engineer @ <a href="https://www.jetpacklabs.com/" class="glow"
+          >Jetpack Labs</a
+        >
+      </p>
+      <p class="quote">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="25"
+          height="13"
+          viewBox="0 0 35 23"
+          fill="#080f0f"
+        >
+          <path
+            d="M1 22L13.5962 3.19977C15.5766 0.243877 19.9234 0.243882 21.9039 3.19978L34.5 22"
+            stroke="#1A2D2D"></path>
+        </svg>
+         “Sometimes even to live is an act of courage” — Seneca
+      </p>
+    </header>
     <slot />
   </body>
 </html>
