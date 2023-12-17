@@ -231,7 +231,7 @@ header {
   .contacts {
     display: flex;
     flex-wrap: wrap;
-
+    
     gap: 20px;
 
     .contact {
@@ -246,7 +246,21 @@ header {
 
       position: relative;
       overflow: hidden;
-      
+
+      transition: 0.1s;
+
+      flex-grow: 1;
+
+      &:hover,
+      &:focus {
+        color: white;
+        border-color: #2c4848;
+
+        svg {
+          color: #2c4848;
+        }
+      }
+
       article * {
         font-style: normal;
         position: relative;
