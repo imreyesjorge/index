@@ -1,0 +1,14 @@
+---
+const { url } = Astro.request;
+---
+
+<nav>
+  <ul>
+    <li>
+      <a href="/" class={!url.includes("blog") ? "active" : ""}>Home</a>
+    </li>
+    <li>
+      <a href="/blog" class={url.includes("blog") ? "active" : ""}>Blog</a>
+    </li>
+  </ul>
+</nav>
