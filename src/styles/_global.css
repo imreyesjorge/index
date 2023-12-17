@@ -81,7 +81,7 @@ header {
   align-items: center;
   gap: 10px;
 
-  & > h1 {
+  & > h3 {
     font-size: 24px;
   }
 
@@ -138,6 +138,84 @@ header {
     left: 50%;
 
     transform: translateX(-50%);
+  }
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+
+  gap: 30px;
+}
+
+.projects {
+  padding: 0 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 30px;
+}
+
+.project {
+  color: inherit;
+  text-decoration: none;
+
+  padding: 20px;
+
+  border: 1px solid transparent;
+  border-radius: 10px;
+
+  transition: 0.1s;
+  outline: none;
+
+  article {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+  }
+
+  &:hover,
+  &:active {
+    color: white;
+
+    background: var(--dark);
+    border-color: var(--border);
+    box-shadow: 0 0 24px rgba(255, 255, 255, 0.025);
+
+    & p {
+      color: white;
+    }
+  }
+
+  &:focus {
+    background: var(--dark);
+    border-color: white;
+
+    & p {
+      color: white;
+    }
+  }
+
+  & .project-title {
+    color: rgb(228, 224, 224);
+
+    display: flex;
+
+    align-items: center;
+    gap: 10px;
+
+    & h2 {
+      font-size: 18px;
+      font-weight: 400;
+    }
+  }
+
+  & p {
+    color: rgb(147, 147, 147);
+
+    transition: 0.1s;
   }
 }
 

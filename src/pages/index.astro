@@ -1,7 +1,76 @@
 ---
-import RootLayout from "../layouts/RootLayout.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+
+type Project = {
+  title: string;
+  description: string;
+  href?: string;
+};
+
+const projects: Project[] = [
+  {
+    title: "Kosmos Chat",
+    description: "A chatroom made with typescript and websockets",
+    href: "https://chat.kosmos.community/",
+  },
+  {
+    title: "Neorank",
+    description: "A sleek and minimal version of Hacker News",
+    href: "https://neorank.reyes.cool/",
+  },
+  {
+    title: "Kosmos",
+    description:
+      "Knowledge-focused spanish community aimed to connect people and help them learn and grow",
+    href: "https://www.kosmos.community/",
+  },
+  {
+    title: "Widgets",
+    description:
+      "A showcase sandbox of react/javascript as a website of widgets",
+    href: "https://widgets-sandbox.vercel.app/",
+  },
+  {
+    title: "Root",
+    description: "Clean and simple start-page for daily use",
+    href: "https://github.com/imreyesjorge/root-startpage",
+  },
+];
 ---
 
-<RootLayout title="Home">
-  <h1>Home Screen</h1>
-</RootLayout>
+<MainLayout pageTitle="Home">
+  <main class="projects-container">
+    <h2>Projects</h2>
+    <section class="projects">
+      {
+        projects.map((project) => (
+          <a class="project" href={project.href}>
+            <article>
+              <div class="project-title">
+                <h2>{project.title}</h2>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-arrow-up-right"
+                >
+                  <>
+                    <line x1="7" y1="17" x2="17" y2="7" />
+                    <polyline points="7 7 17 7 17 17" />
+                  </>
+                </svg>
+              </div>
+              <p>{project.description}</p>
+            </article>
+          </a>
+        ))
+      }
+    </section>
+  </main>
+</MainLayout>
