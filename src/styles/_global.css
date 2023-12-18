@@ -329,6 +329,32 @@ footer {
     margin-bottom: 10px;
   }
 
+  a {
+    border-bottom: 1px dashed currentColor;
+  }
+
+  img {
+    width: 100%;
+
+    margin-top: 10px;
+
+    filter: drop-shadow(0 0 18px rgba(0, 0, 0, 0.5));
+  }
+
+  blockquote {
+    padding: 15px;
+
+    background: var(--dark);
+
+    border: 1px solid var(--border);
+    border-left: 6px solid var(--border);
+    border-radius: 10px;
+
+    * {
+      margin: 0;
+    }
+  }
+
   h1,
   h2,
   h3,
