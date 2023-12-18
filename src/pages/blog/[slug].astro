@@ -1,0 +1,25 @@
+---
+import RootLayout from "../../layouts/RootLayout.astro";
+import { getCollection, getEntry } from "astro:content";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+
+  return posts.map((post) => ({ params: { slug: post.slug }, props: {} }));
+}
+
+const { slug } = Astro.params;
+
+const post = await getEntry("blog", slug);
+const { Content } = await post.render();
+---
+
+<RootLayout>
+  <header>
+    <h2>{post.data.title}</h2>
+    <p>{new Date(post.data.pubDate).toDateString()}</p>
+  </header>
+  <main id="post-md">
+    <Content />
+  </main>
+</RootLayout>
