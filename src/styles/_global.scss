@@ -127,6 +127,8 @@ header {
   color: rgb(205, 205, 205);
   font-weight: 400;
 
+  text-align: center;
+
   margin-top: 25px;
   padding: 15px 25px;
 
@@ -410,7 +412,8 @@ footer {
   }
 }
 
-.ai-enhanced {
+.ai-enhanced,
+.ai-writed {
   color: white;
   font-size: 13px;
   font-weight: 600;
@@ -434,4 +437,8 @@ footer {
 
     fill: white;
   }
+}
+
+.ai-writed {
+  background: #43cd4c;
 }

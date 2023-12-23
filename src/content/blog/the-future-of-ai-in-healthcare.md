@@ -4,7 +4,7 @@ title: "The future of AI in healthcare"
 author: reyes
 pubDate: 2023/12/23
 tags: ["tech", "ai", "healthcare"]
-ai: true
+ai: "writed"
 ---
 
 Artificial intelligence (AI) is rapidly transforming the healthcare industry, with the potential to revolutionize patient care, improve outcomes, and reduce costs. From AI-powered diagnostics to personalized treatment plans, AI is poised to play a major role in the future of healthcare.
