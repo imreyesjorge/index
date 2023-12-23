@@ -316,6 +316,9 @@ footer {
 
 /* Markdown Styling */
 #post-md {
+  display: flex;
+  flex-direction: column;
+
   * {
     color: white;
     margin-bottom: 10px;
@@ -404,5 +407,31 @@ footer {
         line-height: 150%;
       }
     }
+  }
+}
+
+.ai-enhanced {
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 115%;
+
+  padding: 0.3rem 0.6rem;
+  padding-right: 1rem;
+
+  background: #43cdcd;
+  border-radius: 50px;
+
+  align-self: center;
+
+  display: flex;
+  align-items: center;
+  gap: 3px;
+
+  svg {
+    height: 13px;
+    margin: 0;
+
+    fill: white;
   }
 }
