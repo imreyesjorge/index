@@ -417,22 +417,23 @@ footer {
   color: white;
   font-size: 13px;
   font-weight: 600;
-  line-height: 115%;
 
   padding: 0.3rem 0.6rem;
   padding-right: 1rem;
 
-  background: #43cdcd;
+  background: #81288d;
   border-radius: 50px;
 
   align-self: center;
 
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 3px;
 
   svg {
-    height: 13px;
+    width: 15px;
+    height: 15px;
     margin: 0;
 
     fill: white;
@@ -440,5 +441,5 @@ footer {
 }
 
 .ai-writed {
-  background: #43cd4c;
+  background: #2c9132;
 }
