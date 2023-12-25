@@ -1,6 +1,6 @@
 :root {
-  --dark: #080f0f;
-  --border: #1a2d2d;
+  --dark: rgb(10, 11, 12);
+  --border: rgb(30, 34, 37);
 }
 
 *,
@@ -256,10 +256,10 @@ header {
       &:hover,
       &:focus {
         color: white;
-        border-color: #2c4848;
+        border-color: color-mix(in srgb, var(--border) 90%, white);
 
         svg {
-          color: #2c4848;
+          color: color-mix(in srgb, var(--border) 90%, white);
         }
       }
 
