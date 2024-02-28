@@ -6,6 +6,8 @@ pubDate: 2023/01/17
 tags: ["personal"]
 ---
 
+<audio src="/medley.mp3" autoplay loop></audio>
+
 Modern life demands so much of our attention, from the chaotic movement that our cities see every day to our social media feeds that overwhelm us with a toxic amount of either the bad things happening in our world or the good life that everyone else is living but us.
 
 It is not surprising to find out that [social media may cause depression](https://www.healthline.com/health-news/social-media-use-increases-depression-and-loneliness); if almost everything we see there is curated material, our friends will not upload their bad photos; they select only the best ones. Can’t you recall a moment when a friend arranged the table just to take the best picture to share?
