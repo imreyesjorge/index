@@ -230,6 +230,15 @@ header {
   }
 }
 
+.project svg {
+    transition: .2s;
+}
+
+.project:hover svg,
+.project:focus-visible svg {
+    transform: rotate(45deg);
+}
+
 .contact-container {
   display: flex;
   flex-direction: column;
