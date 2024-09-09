@@ -1,22 +1,158 @@
 ---
 import Root from "../layouts/Root.astro";
+
+const portfolioTechnologies: Array<string> = [
+	"HTML",
+	"CSS",
+	"TypeScript",
+	"PHP",
+	"Astro",
+	"Laravel",
+	"Vue",
+	"React",
+	"Angular",
+	"React Native",
+	"Expo",
+	"Docker",
+	"Linux",
+	"Node",
+	"NextJS",
+];
+
+const historySteps: Array<{ title: string; body: string; date: string }> = [
+	{
+		title: "Software Engineer @ Jetpack Labs Inc.",
+		body: "Leveraged a diverse set of technologies, such as React, Tailwind CSS, PHP, Laravel, Hybridly, and Vue, to design and develop a comprehensive web application and multiple landing pages. These tools were instrumental in ensuring a responsive, efficient, and visually appealing user experience.",
+		date: "11/2023 – Present",
+	},
+	{
+		title: "Software Engineer @ OneSeven Tech. (contract)",
+		body: "Collaborated with a client to design and develop a comprehensive web application using Next.js, React, TypeScript, and NestJS. This involved close communication to understand their specific requirements and implement tailored solutions to meet their needs.",
+		date: "06/2023 – 09/2023"
+	},
+	{
+		title: "Software Engineer @ Legal Karma",
+		body: "Worked closely with the design to implement and refactor a single-page application (SPA), paying careful attention to every detail. This project involved utilizing technologies such as Next.js, React, TypeScript, and tRPC, among other tools, to ensure a polished and highly functional final product.",
+		date: "07/2022 – 06/2023"
+	},
+	{
+		title: "Front-end Developer @ Dealergeek",
+		body: "Primarily focused on developing robust web applications using Angular, with an emphasis on creating reusable components to streamline future development. Additionally, gained experience working with React on smaller projects, applying best practices to ensure efficiency and maintainability.",
+		date: "09/2021 – 06/2022",
+	},
+	{
+		title: "Software Engineer Intern @ Dealergeek",
+		body: "Developed two key projects using React and Angular. Leveraged React with React Native to create a multi-platform application, and utilized Angular to build a robust web application, ensuring both projects were optimized for performance and user experience.",
+		date: "06/2021 – 08/2021",
+	},
+	{
+		title: "Software Engineer Intern @ Okani",
+		body: "Leveraged Next.js to design and develop a series of static landing pages, focusing on creating clean, efficient, and visually appealing layouts. In addition to the initial development, I also implemented a range of small but impactful improvements to these pages over time, ensuring that they remained up-to-date and optimized for user engagement and performance. This involved refining design elements, enhancing load times, and ensuring responsiveness across different devices.",
+		date: "12/2020 – 08/2021",
+	},
+];
 ---
 
 <Root>
-	<main class="max-w-3xl mx-auto py-10 px-4">
-		<div class="flex flex-col gap-6">
-			<h1 class="text-lg text-stone-400">
-				Hey, I'm <span class="text-stone-50">Jorge Reyes</span>.
-			</h1>
-			<p class="text-lg leading-relaxed">
-				A Software Engineer that loves to learn new things, linux
-				enthusiast, video-games enjoyer and above all, human. Currently
-				working at <a
-					href="https://jetpacklabs.com"
-					class="underline underline-offset-4 decoration-stone-400 hover:text-orange-300 hover:decoration-current"
-					>Jetpack Labs</a
-				> building beautiful and usable web experiences.
-			</p>
-		</div>
-	</main>
+	<div class="flex flex-col gap-20 leading-relaxed">
+		<header>
+			<div class="flex flex-col gap-6">
+				<h1 class="text-lg font-serif text-stone-400">
+					Hey, I'm <span class="text-stone-50">Jorge Reyes</span>.
+				</h1>
+				<p>
+					A Software Engineer that loves to learn new things, linux
+					enthusiast, video-games enjoyer, pseudo-photographer and
+					above all, human. Currently working at <a
+						href="https://jetpacklabs.com">Jetpack Labs</a
+					> building beautiful and usable web experiences.
+				</p>
+			</div>
+		</header>
+
+		<main class="flex flex-col gap-20">
+			<div class="flex flex-col gap-6">
+				<h2 class="text-lg font-serif text-stone-400">Projects</h2>
+				<p>To-Do...</p>
+			</div>
+
+			<div class="flex flex-col gap-6">
+				<h2 class="text-lg font-serif text-stone-400">Writing</h2>
+				<p>To-Do...</p>
+			</div>
+
+			<div class="flex flex-col gap-6">
+				<h2 class="text-lg font-serif text-stone-400">History</h2>
+				<div>
+					<ul class="flex flex-col">
+						{
+							historySteps.map((step, index) => (
+								<div class="pl-6 border-l border-stone-700 h-12 relative"></div>
+								<li class="pl-6 border-l border-stone-700 relative">
+									<div class="size-4 rounded-lg bg-stone-800 border-2 border-stone-700 absolute top-1.5 left-0 -translate-x-1/2"></div>
+									<div class={ index === 0 ? 'p-4 rounded-lg bg-stone-900 border border-stone-700': ''}>
+										<h3 class="font-serif text-stone-400">
+											{step.title}
+										</h3>
+										<p class="text-sm mb-2">{step.body}</p>
+										<small class="text-xs text-stone-400">
+											{step.date}
+										</small>
+									</div>
+								</li>
+							))
+						}
+					</ul>
+				</div>
+			</div>
+
+			<div class="flex flex-col gap-6">
+				<h2 class="text-lg font-serif text-stone-400">Currently</h2>
+				<p>
+					Found myself learning more about <a
+						href="https://www.php.net">PHP</a
+					> and the amazing toolset provided by <a
+						href="https://laravel.com">Laravel</a
+					>, with the final touch of <a href="https://vuejs.org"
+						>Vue</a
+					>. This technologies are empowering me to craft even more
+					beautiful and awesome web experiences. Altough still working
+					with other incredible frameworks such as <a
+						href="https://astro.build">Astro</a
+					>, which I used to create this website!
+				</p>
+			</div>
+
+			<div class="flex flex-col gap-6">
+				<h2 class="text-lg font-serif text-stone-400">
+					Technologies I’ve worked with
+				</h2>
+				<ul class="flex gap-4 flex-wrap">
+					{
+						portfolioTechnologies.map((technology) => (
+							<li class="text-xs bg-stone-900 px-2.5 py-1.5 rounded-full hover:bg-orange-800">
+								{technology}
+							</li>
+						))
+					}
+				</ul>
+			</div>
+
+			<div class="flex flex-col gap-6">
+				<h2 class="text-lg font-serif text-stone-400">Contact</h2>
+				<p>
+					Send me a mail to <a href="mailto:jorge@reyes.im"
+						>jorge@reyes.im</a
+					> or follow me on <a href="https://x.com/imreyesjorge"
+						>x (formerly twitter)</a
+					>.
+				</p>
+				<p>
+					Inspect my work at <a href="https://github.com/imreyesjorge"
+						>github</a
+					>.
+				</p>
+			</div>
+		</main>
+	</div>
 </Root>

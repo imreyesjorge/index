@@ -12,7 +12,16 @@ import "@fontsource-variable/inter";
         <meta name="generator" content={Astro.generator} />
         <title>Document</title>
     </head>
-    <body class="text-white font-serif text-stone-50 bg-stone-800 bg-[url(/noise.png)] [&_*]:transition [&_*]:duration-75">
+    <body
+        class="text-white font-light font-sans text-stone-50 bg-stone-800 bg-[url(/noise.png)] [&_a]:underline [&_a]:underline-offset-4 [&_a]:decoration-stone-500 hover:[&_a]:text-orange-300 hover:[&_a]:decoration-orange-300/50 [&_*]:transition [&_*]:duration-75 max-w-3xl mx-auto py-10 px-4 grid grid-rows-[1fr,min-content] min-h-screen"
+    >
         <slot />
+        <footer class="border-t border-stone-700 py-6">
+            <p class="font-serif text-center text-stone-400">
+                “Sometimes even to live is an act of courage” <span
+                    class="text-stone-600">— Seneca</span
+                >
+            </p>
+        </footer>
     </body>
 </html>
