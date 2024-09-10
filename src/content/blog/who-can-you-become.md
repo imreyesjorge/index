@@ -6,23 +6,6 @@ pubDate: 2023/01/17
 tags: ["personal"]
 ---
 
-<style>
-  #audio-btn {
-    margin: 2rem;
-
-    background-color: transparent;
-    border: none;
-
-    cursor: pointer;
-
-    position: fixed;
-    top: 0; 
-    right: 0;
-  }
-</style>
-
-<button id="audio-btn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-volume-x"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="22" x2="16" y1="9" y2="15"/><line x1="16" x2="22" y1="9" y2="15"/></svg></button>
-
 Modern life demands so much of our attention, from the chaotic movement that our cities see every day to our social media feeds that overwhelm us with a toxic amount of either the bad things happening in our world or the good life that everyone else is living but us.
 
 It is not surprising to find out that [social media may cause depression](https://www.healthline.com/health-news/social-media-use-increases-depression-and-loneliness); if almost everything we see there is curated material, our friends will not upload their bad photos; they select only the best ones. Can’t you recall a moment when a friend arranged the table just to take the best picture to share?
@@ -48,27 +31,3 @@ If you’re going to compare yourself, do it with your past self. You'll be surp
 What I want to say is that, despite the prognostication, whatever your goal is, pursue it. You’ll need to have patience and practice a lot, but eventually it’s much more likely that you can achieve your goal, so this is a path worth trying.
 
 I hope you realize that you’re becoming the best version of yourself.
-
-<script>
-  const click = new Audio('/click.mp3');
-  const backgroundMusic = new Audio('/medley.mp3');
-  let isPlaying = false;
-
-  const backgroundMusicButton = document.getElementById('audio-btn');
-
-
-  backgroundMusicButton.addEventListener('click', () => {
-    click.load();
-    click.play();
- 
-  if (isPlaying) {
-    backgroundMusic.pause();
-    isPlaying = false;
-    backgroundMusicButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-volume-x"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="22" x2="16" y1="9" y2="15"/><line x1="16" x2="22" y1="9" y2="15"/></svg>';
-  } else {
-    backgroundMusic.play();
-    isPlaying = true;
-    backgroundMusicButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-volume-2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>';
-  }
-  });
-</script>

@@ -87,10 +87,10 @@ const historySteps: Array<{ title: string; body: string; date: string }> = [
 ---
 
 <Root>
-	<div class="flex flex-col gap-20 leading-relaxed mb-20">
+	<div class="text-stone-400 flex flex-col gap-20 leading-relaxed mb-20 hover:[&_a]:text-stone-50 [&_a]:underline [&_a]:underline-offset-2 [&_a]:decoration-dotted">
 		<header>
 			<div class="flex flex-col gap-6">
-				<h1 class="text-lg font-serif text-stone-400">
+				<h1 class="text-lg font-serif text-stone-50">
 					Hey, I'm <span class="text-stone-50">Jorge Reyes</span>.
 				</h1>
 				<p>
@@ -105,11 +105,11 @@ const historySteps: Array<{ title: string; body: string; date: string }> = [
 
 		<main class="flex flex-col gap-20">
 			<div class="flex flex-col gap-6">
-				<h2 class="text-lg font-serif text-stone-400">Projects</h2>
+				<h2 class="text-lg font-serif text-stone-50">Projects</h2>
 				<ul class="grid grid-cols-3 gap-6">
 					{ projects.map((project) => (
 						<li class="flex flex-col gap-2">
-							<h4 class="font-serif leading-none"><a href={project.url} class="text-stone-300 flex items-center gap-1 group"><span>{project.title}</span><svg class="size-4 opacity-0 group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 20 20"><path fill="currentColor" fill-rule="evenodd" d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06" clip-rule="evenodd"/></svg></a></h4>
+							<h4 class="font-serif leading-none"><a href={project.url} class="text-stone-400 flex items-center gap-1 group"><span>{project.title}</span><svg class="size-4 opacity-0 group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 20 20"><path fill="currentColor" fill-rule="evenodd" d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06" clip-rule="evenodd"/></svg></a></h4>
 							<p>{project.body}</p>
 						</li>
 					)) }
@@ -117,7 +117,7 @@ const historySteps: Array<{ title: string; body: string; date: string }> = [
 			</div>
 
 			<div class="flex flex-col gap-6">
-				<h2 class="text-lg font-serif text-stone-400">Currently</h2>
+				<h2 class="text-lg font-serif text-stone-50">Currently</h2>
 				<p>
 					Found myself learning more about <a
 						href="https://www.php.net">PHP</a
@@ -134,7 +134,7 @@ const historySteps: Array<{ title: string; body: string; date: string }> = [
 			</div>
 
 			<div class="flex flex-col gap-6">
-				<h2 class="text-lg font-serif text-stone-400">History</h2>
+				<h2 class="text-lg font-serif text-stone-50">History</h2>
 				<div>
 					<ul class="flex flex-col">
 						{
@@ -159,7 +159,7 @@ const historySteps: Array<{ title: string; body: string; date: string }> = [
 			</div>
 
 			<div class="flex flex-col gap-6">
-				<h2 class="text-lg font-serif text-stone-400">
+				<h2 class="text-lg font-serif text-stone-50">
 					Technologies I’ve worked with
 				</h2>
 				<ul class="flex gap-4 flex-wrap">
@@ -174,7 +174,7 @@ const historySteps: Array<{ title: string; body: string; date: string }> = [
 			</div>
 
 			<div class="flex flex-col gap-6">
-				<h2 class="text-lg font-serif text-stone-400">Contact</h2>
+				<h2 class="text-lg font-serif text-stone-50">Contact</h2>
 				<p>
 					Send me a mail to <a href="mailto:jorge@reyes.im"
 						>jorge@reyes.im</a
