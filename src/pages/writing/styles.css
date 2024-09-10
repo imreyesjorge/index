@@ -1,0 +1,69 @@
+#md-content {
+    @apply text-stone-400 mb-20 max-w-full;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply text-2xl font-serif mt-12 text-stone-50 mb-4;
+    }
+
+    h1 {
+        @apply text-stone-50;
+    }
+
+    p {
+        @apply mb-4;
+    }
+
+    strong {
+        @apply font-semibold font-serif text-lg text-stone-200;
+    }
+
+    code {
+        @apply text-sm bg-stone-950 px-1.5 py-1 rounded border border-stone-800;
+    }
+
+    pre {
+        @apply pl-4 pr-4 pt-4 rounded-lg shadow-lg mb-4;
+
+        border: 1px solid #373535 !important;
+        background: #171717 !important;
+
+        code {
+            @apply bg-transparent border-none mb-0;
+        }
+    }
+
+    pre {
+        max-width: 736px;
+    }
+
+    a {
+        @apply underline underline-offset-2 decoration-dotted;
+    }
+
+    a:hover {
+        @apply text-stone-50;
+    }
+
+    em {
+        @apply font-serif text-lg;
+    }
+
+    blockquote {
+        @apply p-4 text-stone-50 text-center text-xl mb-4 font-serif;
+    }
+
+    blockquote * {
+        @apply m-0;
+    }
+
+    ul {
+        @apply pl-6;
+
+        list-style: circle;
+    }
+}
