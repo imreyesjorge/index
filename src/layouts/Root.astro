@@ -13,6 +13,7 @@ import "@fontsource-variable/inter";
         <title>Document</title>
     </head>
     <body
+        style="opacity: 0;"
         class="text-white font-light font-sans text-stone-50 bg-stone-800 bg-[url(/noise.png)] [&_a]:underline [&_a]:underline-offset-4 [&_a]:decoration-stone-500 hover:[&_a]:text-orange-300 hover:[&_a]:decoration-orange-300/50 [&_*]:transition [&_*]:duration-75 max-w-3xl mx-auto py-10 px-4 grid grid-rows-[1fr,min-content] min-h-screen"
     >
         <slot />
@@ -23,5 +24,8 @@ import "@fontsource-variable/inter";
                 >
             </p>
         </footer>
+        <script>
+            document.body.style.opacity = "100";
+        </script>
     </body>
 </html>
