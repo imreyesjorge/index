@@ -1,29 +1,30 @@
 ---
 import "@fontsource-variable/alegreya";
 import "@fontsource-variable/inter";
+import "@fontsource-variable/fira-code";
 import Navbar from "../components/shared/Navbar.astro";
 ---
 
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
-        <title>Jorge Reyes</title>
-    </head>
-    <body
-        class="text-white font-light font-sans text-stone-50 bg-stone-900 bg-[url(/noise.png)] max-w-3xl mx-auto py-10 px-4 grid grid-rows-[min-content,1fr,min-content] min-h-screen"
-    >
-        <Navbar />
-        <slot />
-        <footer class="border-t border-stone-700 py-6">
-            <p class="font-serif text-center text-stone-400">
-                “Sometimes even to live is an act of courage” <span
-                    class="text-stone-600">— Seneca</span
-                >
-            </p>
-        </footer>
-    </body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Jorge Reyes</title>
+  </head>
+  <body
+    class="text-white font-light font-sans text-stone-50 bg-stone-900 bg-[url(/noise.png)] max-w-3xl mx-auto py-10 px-4 grid grid-rows-[min-content,1fr,min-content] min-h-screen"
+  >
+    <Navbar />
+    <slot />
+    <footer class="border-t border-stone-700 py-6">
+      <p class="font-serif text-center text-stone-400">
+        “Sometimes even to live is an act of courage” <span
+          class="text-stone-600">— Seneca</span
+        >
+      </p>
+    </footer>
+  </body>
 </html>

@@ -141,9 +141,9 @@ const historySteps: Array<{ title: string; body: string; date: string }> = [
 							historySteps.map((step, index) => (
 								<div class="pl-6 border-l border-stone-700 h-12 relative"></div>
 								<li class="pl-6 border-l border-stone-700 relative">
-									<div class="size-4 rounded-lg bg-stone-800 border-2 border-stone-700 absolute top-1.5 left-0 -translate-x-1/2"></div>
+									<div class="size-4 rounded-lg bg-stone-900 border-2 border-stone-700 absolute top-1.5 left-0 -translate-x-1/2"></div>
 									<div class={ index === 0 ? 'p-4 rounded-lg bg-stone-900 border border-stone-700 shadow-lg': ''}>
-										<h3 class="font-serif text-stone-400">
+										<h3 class="font-serif text-stone-50">
 											{step.title}
 										</h3>
 										<p class="text-sm mb-2">{step.body}</p>
@@ -165,7 +165,7 @@ const historySteps: Array<{ title: string; body: string; date: string }> = [
 				<ul class="flex gap-4 flex-wrap">
 					{
 						portfolioTechnologies.map((technology) => (
-							<li class="text-xs bg-stone-900 px-2.5 py-1.5 rounded-full hover:bg-orange-800">
+							<li class="text-xs bg-stone-900 px-2.5 py-1.5 rounded-full hover:bg-orange-800 hover:text-stone-50 transition">
 								{technology}
 							</li>
 						))
