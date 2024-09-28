@@ -13,7 +13,7 @@ const blogPosts = (await getCollection("blog")).sort(
     <ul class="flex flex-col gap-6 mb-10">
       {
         blogPosts.map((post) => (
-          <li class="flex flex-col gap-2 hover:bg-stone-900 transition p-4 rounded-lg blog-post">
+          <li class="flex flex-col gap-2 hover:bg-stone-900 transition p-4 rounded-lg opacity-0 blog-post">
             <div class="flex items-center justify-between">
               <h2 class="font-serif">
                 <a
