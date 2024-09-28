@@ -23,7 +23,7 @@
     }
 
     code {
-        @apply text-sm bg-stone-950 px-1.5 py-1 rounded border border-stone-800;
+        @apply text-sm bg-stone-950 px-1.5 py-1 rounded border border-stone-800 font-sans;
     }
 
     pre {

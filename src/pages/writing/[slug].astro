@@ -5,11 +5,11 @@ import Root from "../../layouts/Root.astro";
 import "./styles.css";
 
 export const getStaticPaths = (async () => {
-    const blogEntries = await getCollection("blog");
-    return blogEntries.map((entry) => ({
-        params: { slug: entry.slug },
-        props: { entry },
-    }));
+  const blogEntries = await getCollection("blog");
+  return blogEntries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
 }) satisfies GetStaticPaths;
 
 const { entry } = Astro.props;
@@ -17,18 +17,31 @@ const { Content } = await entry.render();
 ---
 
 <Root>
-    <div>
-        <div class="mb-10 text-center">
-            <h1
-                class="font-serif"
-                style={{ fontSize: "36px", marginBottom: "10px" }}
-            >
-                {entry.data.title}
-            </h1>
-            <p class="text-sm text-stone-400">{entry.data.pubDate}</p>
-        </div>
-        <main id="md-content" class="text-stone-50 leading-relaxed">
-            <Content />
-        </main>
+  <div>
+    <div class="mb-10 text-center">
+      <h1 class="font-serif" style={{ fontSize: "36px", marginBottom: "10px" }}>
+        {entry.data.title}
+      </h1>
+      <p class="text-sm text-stone-400">
+        Jorge Reyes <span class="text-stone-600">–</span> {new Date(entry.data.pubDate).toDateString()}
+      </p>
     </div>
+    <main id="md-content" class="text-stone-50 leading-relaxed">
+      <Content />
+    </main>
+  </div>
 </Root>
+
+<script>
+  import { animate, inView } from "motion";
+
+  const mainContainer = document.querySelector("#md-content")!;
+
+  inView(mainContainer.querySelectorAll("*"), (info) => {
+    animate(
+      info.target,
+      { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] },
+      { delay: 0.25 }
+    );
+  });
+</script>
