@@ -13,7 +13,7 @@ const blogPosts = (await getCollection("blog")).sort(
     <ul class="flex flex-col gap-6 mb-10">
       {
         blogPosts.map((post) => (
-          <li class="flex flex-col gap-2 hover:bg-stone-900 transition p-4 rounded-lg">
+          <li class="flex flex-col gap-2 hover:bg-stone-900 transition p-4 rounded-lg blog-post">
             <div class="flex items-center justify-between">
               <h2 class="font-serif">
                 <a
@@ -40,3 +40,9 @@ const blogPosts = (await getCollection("blog")).sort(
     </ul>
   </main>
 </Root>
+
+<script>
+	import { animate, inView, stagger } from 'motion';
+
+		animate('.blog-post', { opacity: [0, 1], transform: ['translateY(20px)', 'translateY(0)'] }, { duration: 0.25, delay: stagger(0.15) });
+</script>

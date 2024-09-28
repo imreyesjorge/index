@@ -88,7 +88,7 @@ const historySteps: Array<{ title: string; body: string; date: string }> = [
 
 <Root>
 	<div class="text-stone-400 flex flex-col gap-20 leading-relaxed mb-20 hover:[&_a]:text-stone-50 [&_a]:underline [&_a]:underline-offset-2 [&_a]:decoration-dotted">
-		<header>
+		<header class="opacity-0 section">
 			<div class="flex flex-col gap-6">
 				<h1 class="text-lg font-serif text-stone-50">
 					Hey, I'm <span class="text-stone-50">Jorge Reyes</span>.
@@ -104,7 +104,7 @@ const historySteps: Array<{ title: string; body: string; date: string }> = [
 		</header>
 
 		<main class="flex flex-col gap-20">
-			<div class="flex flex-col gap-6">
+			<div class="flex flex-col gap-6 opacity-0 section">
 				<h2 class="text-lg font-serif text-stone-50">Projects</h2>
 				<ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
 					{ projects.map((project) => (
@@ -116,7 +116,7 @@ const historySteps: Array<{ title: string; body: string; date: string }> = [
 				</ul>
 			</div>
 
-			<div class="flex flex-col gap-6">
+			<div class="flex flex-col gap-6 opacity-0 section">
 				<h2 class="text-lg font-serif text-stone-50">Currently</h2>
 				<p>
 					Found myself learning more about <a
@@ -133,7 +133,7 @@ const historySteps: Array<{ title: string; body: string; date: string }> = [
 				</p>
 			</div>
 
-			<div class="flex flex-col gap-6">
+			<div class="flex flex-col gap-6 opacity-0 section">
 				<h2 class="text-lg font-serif text-stone-50">History</h2>
 				<div>
 					<ul class="flex flex-col">
@@ -142,7 +142,7 @@ const historySteps: Array<{ title: string; body: string; date: string }> = [
 								<div class="pl-6 border-l border-stone-700 h-12 relative"></div>
 								<li class="pl-6 border-l border-stone-700 relative">
 									<div class="size-4 rounded-lg bg-stone-900 border-2 border-stone-700 absolute top-1.5 left-0 -translate-x-1/2"></div>
-									<div class={ index === 0 ? 'p-4 rounded-lg bg-stone-900 border border-stone-700 shadow-lg': ''}>
+									<div class={ index === 0 ? 'p-4 rounded-lg bg-stone-900 border border-stone-700 shadow-lg history-step': 'history-step'}>
 										<h3 class="font-serif text-stone-50">
 											{step.title}
 										</h3>
@@ -158,7 +158,7 @@ const historySteps: Array<{ title: string; body: string; date: string }> = [
 				</div>
 			</div>
 
-			<div class="flex flex-col gap-6">
+			<div class="flex flex-col gap-6 opacity-0 section">
 				<h2 class="text-lg font-serif text-stone-50">
 					Technologies I’ve worked with
 				</h2>
@@ -173,7 +173,7 @@ const historySteps: Array<{ title: string; body: string; date: string }> = [
 				</ul>
 			</div>
 
-			<div class="flex flex-col gap-6">
+			<div class="flex flex-col gap-6 opacity-0 section">
 				<h2 class="text-lg font-serif text-stone-50">Contact</h2>
 				<p>
 					Send me a mail to <a href="mailto:jorge@reyes.im"
@@ -191,3 +191,13 @@ const historySteps: Array<{ title: string; body: string; date: string }> = [
 		</main>
 	</div>
 </Root>
+
+<script>
+	import { animate, inView } from 'motion';
+
+	const sections = document.querySelectorAll('.section');
+
+	inView(sections, (info) => {
+		animate(info.target, { opacity: [0, 1], transform: ['translateY(20px)', 'translateY(0)'] }, { delay: 0.15 });
+	})
+</script>
