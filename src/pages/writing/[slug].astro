@@ -1,33 +1,82 @@
 ---
+export const prerender = false;
+
 import type { GetStaticPaths } from "astro";
 import { getCollection } from "astro:content";
 import Root from "../../layouts/Root.astro";
 import "./styles.css";
 
-export const getStaticPaths = (async () => {
-  const blogEntries = await getCollection("blog");
-  return blogEntries.map((entry) => ({
-    params: { slug: entry.slug },
-    props: { entry },
-  }));
-}) satisfies GetStaticPaths;
+// export const getStaticPaths = (async () => {
+//   const blogEntries = await getCollection("blog");
+//   return blogEntries.map((entry) => ({
+//     params: { slug: entry.slug },
+//     props: { entry },
+//   }));
+// }) satisfies GetStaticPaths;
 
-const { entry } = Astro.props;
-const { Content } = await entry.render();
+const { slug } = Astro.params;
+
+type PostData = {
+  post: {
+    id: string;
+    title: string;
+    readTimeInMinutes: string;
+    publishedAt: string;
+    coverImage: {
+      url: string;
+    };
+    content: {
+      html: string;
+    };
+  };
+};
+
+const response = await fetch("https://gql.hashnode.com", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    query: `
+      query {
+        post(id: "${slug}") {
+          id
+          title
+          readTimeInMinutes
+          publishedAt
+          content {
+            html
+          }
+        }
+      }
+    `,
+  }),
+});
+
+const {
+  post: {
+    title,
+    readTimeInMinutes,
+    publishedAt,
+    content: { html: pageContent },
+  },
+} = (await response.json()).data as PostData;
 ---
 
 <Root>
   <div>
     <div class="mb-10 text-center">
       <h1 class="font-serif" style={{ fontSize: "36px", marginBottom: "10px" }}>
-        {entry.data.title}
+        {title}
       </h1>
-      <p class="text-sm text-stone-400">
-        Jorge Reyes <span class="text-stone-600">–</span> {new Date(entry.data.pubDate).toDateString()}
-      </p>
+      <div class="grid gap-2">
+        <p class="text-sm text-stone-400">
+          Jorge Reyes <span class="text-stone-600">–</span>
+          {new Date(publishedAt).toDateString()}
+        </p>
+        <p class="text-xs text-stone-400">{readTimeInMinutes} min.</p>
+      </div>
     </div>
     <main id="md-content" class="text-stone-50 leading-relaxed *:opacity-0">
-      <Content />
+      <Fragment set:html={pageContent} />
     </main>
   </div>
 </Root>
