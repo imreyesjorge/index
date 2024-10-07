@@ -27,7 +27,7 @@
     }
 
     pre {
-        @apply pl-4 pr-4 pt-4 rounded-lg shadow-lg mb-4;
+        @apply px-4 py-3 rounded-lg shadow-lg mb-4;
 
         border: 1px solid #373535 !important;
         background: #171717 !important;
