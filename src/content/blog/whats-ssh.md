@@ -1,6 +1,6 @@
 ---
-# layout: ../../layouts/Post.astro
-title: What's SSH?
+title: "What's SSH?"
+slug: "whats-ssh"
 author: reyes
 pubDate: 2021/12/24
 tags: ["tech", "linux", "sysadmin"]

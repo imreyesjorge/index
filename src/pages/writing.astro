@@ -1,97 +1,50 @@
 ---
 export const prerender = false;
-
+import { getCollection, getEntry } from "astro:content";
 import Root from "../layouts/Root.astro";
 
-type UserData = {
-  user: {
-    id: string;
-    posts: {
-      nodes: Array<{
-        id: string;
-        slug: string;
-        title: string;
-        brief: string;
-        publishedAt: string;
-        tags: Array<{ name: string }>;
-      }>;
-    };
-  };
-};
-
-const response = await fetch("https://gql.hashnode.com", {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({
-    query: `
-      query {
-        user(username: "imreyesjorge") {
-          id,
-          posts(page: 1, pageSize: 12) {
-            totalDocuments
-            nodes {
-              id
-              slug
-              title
-              brief
-              publishedAt
-              tags {
-                name
-              }
-            }
-          }
-        }
-      }
-    `,
-  }),
-});
-
-const {
-  user: {
-    posts: { nodes: blogPosts },
-  },
-} = (await response.json()).data as UserData;
+const blogPosts = (await getCollection("blog"))
+    .sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf())
+    .reverse();
 ---
 
 <Root>
-  <main>
-    <ul class="flex flex-col gap-6 mb-10">
-      {
-        blogPosts.map((post) => (
-          <li class="flex flex-col gap-2 hover:bg-stone-900 transition p-4 rounded-lg blog-post">
-            <div class="flex items-center justify-between">
-              <h2 class="font-serif">
-                <a
-                  href={`/writing/${post.id}`}
-                  class="hover:underline underline-offset-2"
-                >
-                  {post.title}
-                </a>
-              </h2>
-              <small class="text-xs text-stone-400">
-                {new Date(post.publishedAt).toDateString()}
-              </small>
-            </div>
-            <ul class="flex items-center flex-wrap gap-2">
-              {post.tags.map((tag) => (
-                <li class="text-xs text-stone-400 bg-stone-800 rounded px-1.5 py-0.5 border border-stone-700/50 uppercase">
-                  {tag.name}
-                </li>
-              ))}
-            </ul>
-          </li>
-        ))
-      }
-    </ul>
-  </main>
+    <main>
+        <ul class="flex flex-col gap-6 mb-10">
+            {
+                blogPosts.map((post) => (
+                    <li>
+                        <a
+                            href={`/writing/${post.data.slug}`}
+                            class="flex flex-col gap-2 hover:bg-stone-900 transition p-4 rounded-lg blog-post"
+                        >
+                            <div class="flex items-center justify-between">
+                                <h2 class="font-serif">{post.data.title}</h2>
+                                <small class="text-xs text-stone-400">
+                                    {new Date(post.data.pubDate).toDateString()}
+                                </small>
+                            </div>
+                            <ul class="flex items-center flex-wrap gap-2">
+                                {post.data.tags.map((tag) => (
+                                    <li class="text-[8px] text-stone-300 bg-stone-800 rounded px-1.5 py-0.5 border border-stone-700/50 uppercase">
+                                        {tag}
+                                    </li>
+                                ))}
+                            </ul>
+                        </a>
+                    </li>
+                ))
+            }
+        </ul>
+    </main>
 </Root>
 
 <script>
-  import { animate, inView, stagger } from "motion";
+    import { animate, inView, stagger } from "motion";
 
-  animate(
-    ".blog-post",
-    { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] },
-    { duration: 0.25, delay: stagger(0.15) }
-  );
+    animate(
+        ".blog-post",
+        { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] },
+        { duration: 0.25, delay: stagger(0.15) },
+    );
 </script>

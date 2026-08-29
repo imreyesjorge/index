@@ -1,6 +1,6 @@
 ---
-# layout: ../../layouts/Post.astro
 title: "Using neo-vim, learning new things"
+slug: "using-neovim-learning-new-things"
 author: reyes
 pubDate: 2023/2/1
 tags: ["tech", "linux"]

@@ -1,5 +1,6 @@
 ---
-title: What’s JavaScript?
+title: "What’s JavaScript?"
+slug: "whats-javascript"
 author: reyes
 pubDate: 2021/04/24
 tags: ["tech", "web"]

@@ -1,6 +1,7 @@
 ---
 title: "Utilizing Generics in React Components"
-author: "Reyes"
+slug: "utilizing-generics-in-react-components"
+author: reyes
 pubDate: 2024/03/08
 tags: ["technology", "accessibility", "web"]
 ai: "enhanced"

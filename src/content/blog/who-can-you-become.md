@@ -1,6 +1,6 @@
 ---
-# layout: ../../layouts/Post.astro
-title: Who can you become?
+title: "Who can you become?"
+slug: "who-can-you-become"
 author: reyes
 pubDate: 2023/01/17
 tags: ["personal"]

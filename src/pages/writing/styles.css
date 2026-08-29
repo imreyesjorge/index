@@ -23,7 +23,7 @@
     }
 
     code {
-        @apply text-sm bg-stone-950 px-1.5 py-1 rounded border border-stone-800 font-sans;
+        @apply text-xs text-stone-200 bg-stone-950 px-1.5 py-1 rounded border border-stone-800 font-mono;
     }
 
     pre {
@@ -33,7 +33,7 @@
         background: #171717 !important;
 
         code {
-            @apply bg-transparent border-none mb-0;
+            @apply text-sm bg-transparent border-none mb-0 p-0;
         }
     }
 
@@ -61,9 +61,18 @@
         @apply m-0;
     }
 
+    ul,ol {
+        @apply mb-2;
+    }
+
     ul {
         @apply pl-6;
-
         list-style: circle;
     }
+
+    ol {
+        @apply pl-6;
+        list-style: lower-roman;
+    }
+
 }

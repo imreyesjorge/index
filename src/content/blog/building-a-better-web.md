@@ -1,6 +1,7 @@
 ---
 title: "Building a better web"
-author: "reyes"
+slug: "building-a-better-web"
+author: reyes
 pubDate: 2023/12/27
 tags: ["tech", "a11y", "web"]
 ai: "enhanced"

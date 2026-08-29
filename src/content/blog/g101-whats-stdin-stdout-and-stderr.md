@@ -1,5 +1,6 @@
 ---
 title: "GNU/Linux 101: What's stdin, stdout and stderr?"
+slug: "g101-whats-stdin-stdout-and-stderr"
 author: reyes
 pubDate: 2021/09/04
 tags: ["tech", "web", "linux"]
@@ -13,11 +14,7 @@ First of all, lets see the definition of Input/Output of [TheFreeDictionary](htt
 
 We can see Input as all the data that flows **into** a computer or process, and the output as the complete opposite because the data flows **from** the computer or process.
 
-![Desktop - 2 (1).png](https://cdn.hashnode.com/res/hashnode/image/upload/v1630810220037/UTjL5A1wz.png)
-
 > **TL;DR:** **Stdin** is all the input normally via keyboard, but can be via a file or an output redirection. **Stdout** is the expected output of the process, while the **Stderr** is the unexpected output of the process, the error ones.
-
-![Desktop - 1.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1630813456614/NTviFs-yT.png)
 
 > This is the big picture of the stdin, stdout and stderr
 
@@ -36,9 +33,3 @@ The _stderr_ is pretty similar to stdout, basically is the same, but in this cas
 ## Conclusion
 
 Three default data streams in GNU/Linux are the _stdin_, _stdout_ and _stderr_. This are the tools used for communicating with a process, and understanding what each one does it's simple.
-
-Hope you find this article useful and helpful, see you next time 👋.
-
-**If you noticed any error, please let me know. I'm always up to learning or relearning if necessary.**
-
-– [@imreyesjorge](https://twitter.com/imreyesjorge)

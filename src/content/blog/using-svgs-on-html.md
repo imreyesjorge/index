@@ -1,6 +1,6 @@
 ---
-# layout: ../../layouts/Post.astro
-title: Using SVGs on HTML5 and CSS3
+title: "Using SVGs on HTML5 and CSS3"
+slug: "using-svgs-on-html5-and-css3"
 author: reyes
 pubDate: 2023/01/11
 tags: ["tech", "web"]
@@ -71,5 +71,3 @@ What we're doing here is that we're creating a square (or rectangle) with the de
 There may be another ways of implementing SVGs on your project, but my guess is that these three are the most used ones, also the quickest ones because we're relying on pure html and css reducing the total file size, thus, reducing the amount of data that needs to be sent over the network.
 
 Try to choose using SVGs over images when possible, and use efficient compress algorithms (such as .webp) and CDNs when using images.
-
-Hope this helps you, see you next time 👋🏻

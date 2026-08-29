@@ -1,6 +1,6 @@
 ---
-# layout: ../../layouts/Post.astro
-title: What's CORS (Cross-Origin Resource Sharing)?
+title: "What's CORS (Cross-Origin Resource Sharing)?"
+slug: "whats-cors"
 author: reyes
 pubDate: 2021/02/26
 tags: ["tech", "web"]
@@ -27,5 +27,3 @@ Having this in mind, we can now see an example. Imagine we have a domain called 
 But, when we add `Acces-Control-Allow-Origin: http://domain-b.com` to our `domain-a`.com server, the fetch petition from the second domain to the first one will succeed, the browser will now allow this fetch request because `domain-a.com` told the browser to permit the petitions from `domain-b.com`.
 
 This was a brief description of what is CORS, more information can be found at the [MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS).
-
-Thanks for reading 🥳.

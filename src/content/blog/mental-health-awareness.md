@@ -1,6 +1,6 @@
 ---
-# layout: ../../layouts/Post.astro
 title: "Mental health awareness"
+slug: "mental-health-awareness"
 author: reyes
 pubDate: 2023/3/22
 tags: ["personal"]

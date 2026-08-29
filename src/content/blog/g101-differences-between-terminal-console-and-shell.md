@@ -1,5 +1,6 @@
 ---
 title: "GNU/Linux 101: Differences between Terminal, Console and Shell"
+slug: "g101-differences-between-terminal-console-and-shell"
 author: reyes
 pubDate: 2021/08/28
 tags: ["tech", "web"]
@@ -36,9 +37,3 @@ The **console** was strictly a physical terminal, a piece of hardware connected 
 During all this time, this concepts has suffered from abstractions. Nowadays, the vast majority of shells are running in the same PC, the job of the console was consumed by the same PC and what we know as "terminal" it's really a [**Terminal Emulator**](https://en.wikipedia.org/wiki/Terminal_emulator) running, again, in the same PC.
 
 As you can see all the physical parts are now inside the same computer, making the understanding of this concepts a little blurry, and for practical use, now the Console and the Terminal are used as synonyms.
-
-Hope you find this helpful to better understand what does these three concepts means. See you next time.
-
-**If you noticed any error, please let me know. I'm always up to learning or relearning if necessary.**
-
-– [@imreyesjorge](https://twitter.com/imreyesjorge)
