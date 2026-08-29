@@ -1,6 +1,6 @@
 /* empty css                                 */
-import { e as createComponent, f as createAstro, k as renderComponent, l as renderScript, r as renderTemplate, m as maybeRenderHead, h as addAttribute } from '../chunks/astro/server_BTfbnECp.mjs';
-import { $ as $$Root } from '../chunks/Root_hL2SV6MV.mjs';
+import { c as createComponent, a as createAstro, r as renderComponent, b as renderScript, d as renderTemplate, m as maybeRenderHead, e as addAttribute } from '../chunks/astro/server_CQvvQdJu.mjs';
+import { $ as $$Root } from '../chunks/Root_BMi-QTQD.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$Astro = createAstro();

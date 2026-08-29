@@ -6,12 +6,12 @@ import "./styles.css";
 const { slug } = Astro.params;
 import { getEntry, render } from "astro:content";
 
-const entry = await getEntry("blog", slug);
-const { Content } = await render(entry);
+const entry = await getEntry("blog", slug!);
+const { Content } = await render(entry!);
 ---
 
 <Root>
-    <h1 class="text-center text-6xl mb-12 font-serif">{entry.data.title}</h1>
+    <h1 class="text-center text-6xl mb-12 font-serif">{entry?.data.title}</h1>
     <main id="md-content">
         <Content />
     </main>
