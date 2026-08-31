@@ -197,7 +197,7 @@ const historySteps: Array<{ title: string; body: string; date: string }> = [
 
 	const sections = document.querySelectorAll('.section');
 
-	inView(sections, (info) => {
-		animate(info.target, { opacity: [0, 1], transform: ['translateY(20px)', 'translateY(0)'] }, { delay: 0.15 });
+	inView(sections, (element) => {
+		animate(element, { opacity: [0, 1], transform: ['translateY(20px)', 'translateY(0)'] }, { delay: 0.15 });
 	})
 </script>

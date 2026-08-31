@@ -1,1 +1,0 @@
-import{a}from"./animate.es.9BHA7DY7.js";import{i as e}from"./in-view.es.CmkULtiI.js";const o=document.querySelectorAll(".section");e(o,t=>{a(t.target,{opacity:[0,1],transform:["translateY(20px)","translateY(0)"]},{delay:.15})});
