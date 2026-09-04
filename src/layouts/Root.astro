@@ -2,39 +2,42 @@
 import "@fontsource-variable/alegreya";
 import "@fontsource-variable/inter";
 import "@fontsource-variable/fira-code";
-import '../styles/global.css'
+import "../styles/global.css";
 import Navbar from "../components/shared/Navbar.astro";
 ---
 
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Jorge Reyes</title>
-  </head>
-  <body class="bg-stone-900 bg-[url(/noise.png)]">
-    <div
-      id="main-container"
-      class="hidden text-white font-light font-sans text-stone-50 max-w-3xl mx-auto py-10 px-4 grid grid-rows-[min-content,1fr,min-content] min-h-screen"
-    >
-      <Navbar />
-      <slot />
-      <footer class="border-t border-stone-700 py-6">
-        <p class="font-serif text-center text-stone-400">
-          “Sometimes even to live is an act of courage” <span
-            class="text-stone-600">— Seneca</span
-          >
-        </p>
-      </footer>
-    </div>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Jorge Reyes</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body class="bg-stone-900 bg-[url(/noise.png)]">
+        <div
+            id="main-container"
+            class="hidden text-white font-light font-sans text-stone-50 max-w-3xl mx-auto py-10 px-4 grid grid-rows-[min-content,1fr,min-content] min-h-screen"
+        >
+            <Navbar />
+            <slot />
+            <footer class="border-t border-stone-700 py-6">
+                <p class="font-serif text-center text-stone-400">
+                    “Sometimes even to live is an act of courage” <span
+                        class="text-stone-600">— Seneca</span
+                    >
+                </p>
+            </footer>
+        </div>
 
-    <script>
-      window.addEventListener("load", () => {
-        document.querySelector("#main-container")?.classList.remove("hidden");
-      });
-    </script>
-  </body>
+        <script>
+            window.addEventListener("load", () => {
+                document
+                    .querySelector("#main-container")
+                    ?.classList.remove("hidden");
+            });
+        </script>
+    </body>
 </html>
