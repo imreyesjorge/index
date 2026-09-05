@@ -5,6 +5,7 @@ author: reyes
 pubDate: 2024/03/08
 tags: ["technology", "accessibility", "web"]
 ai: "enhanced"
+draft: false
 ---
 
 If you have experience with TypeScript, you are likely familiar with generics and their applications. However, let's revisit the concept briefly with a concise example.

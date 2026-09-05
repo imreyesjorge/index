@@ -4,6 +4,7 @@ slug: "whats-javascript"
 author: reyes
 pubDate: 2021/04/24
 tags: ["tech", "web"]
+draft: false
 ---
 
 The **JavaScript (JS)** technology appeared at 1995, as a way to develop interactive web-pages in the [Netscape](https://en.wikipedia.org/wiki/Netscape) Browser, which was one of the firsts browsers of all time.

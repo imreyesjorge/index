@@ -4,6 +4,7 @@ slug: "using-neovim-learning-new-things"
 author: reyes
 pubDate: 2023/2/1
 tags: ["tech", "linux"]
+draft: false
 ---
 
 Deciding to do something new and to challenge myself I thought about start leaving vscode in favor of using something less resource-eater _(don’t forget that vscode is an electron app)_, and here I am, starting my journy with neo-vim.

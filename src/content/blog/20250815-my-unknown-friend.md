@@ -4,6 +4,7 @@ slug: "my-unknown-friend"
 author: reyes
 pubDate: 2025/08/15
 tags: ["personal"]
+draft: false
 ---
 
 Lately I’ve been craving more real interaction here in the internet, like really talk and connecting with someone else no matter the distance, but it’s helpless to feel like this isn’t much possible anymore, or at least that’s what I thought before learning about [neocities](https://neocities.org/).

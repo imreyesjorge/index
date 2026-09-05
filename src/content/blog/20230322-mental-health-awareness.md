@@ -5,6 +5,7 @@ author: reyes
 pubDate: 2023/3/22
 tags: ["personal"]
 ai: "enhanced"
+draft: false
 ---
 
 This is my opinion and not medical advice. Your mental health is important and seeking help is not a sign of weakness. [Contact a healthcare professional if you need assistance](https://findahelpline.com/).

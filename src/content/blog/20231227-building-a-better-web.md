@@ -5,6 +5,7 @@ author: reyes
 pubDate: 2023/12/27
 tags: ["tech", "a11y", "web"]
 ai: "enhanced"
+draft: false
 ---
 
 There's much to discuss when it comes to building better websites: performance, loading speed, memory efficiency, and more. However, one aspect I find particularly compelling is accessibility.

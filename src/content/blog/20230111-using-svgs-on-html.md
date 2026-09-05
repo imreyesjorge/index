@@ -4,6 +4,7 @@ slug: "using-svgs-on-html5-and-css3"
 author: reyes
 pubDate: 2023/01/11
 tags: ["tech", "web"]
+draft: false
 ---
 
 Using SVGs can be a little tricky at first depending on how you want to use them. There're some different ways to implement svgs on a web-page, to list some:

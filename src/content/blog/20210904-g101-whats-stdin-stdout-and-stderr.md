@@ -4,6 +4,7 @@ slug: "g101-whats-stdin-stdout-and-stderr"
 author: reyes
 pubDate: 2021/09/04
 tags: ["tech", "web", "linux"]
+draft: false
 ---
 
 Usually, when using a terminal emulator we don't think about the data flow ([data streams](<https://en.wikipedia.org/wiki/Stream_(computing)>)), we just type some commands and expect an output right in the screen. In this brief article I'll try to explain what's **stdin**, **stdout** and **stderr**.

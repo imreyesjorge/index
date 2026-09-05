@@ -4,6 +4,7 @@ slug: "g101-differences-between-terminal-console-and-shell"
 author: reyes
 pubDate: 2021/08/28
 tags: ["tech", "web"]
+draft: false
 ---
 
 When first diving into **GNU/Linux** there's three confusing concepts: _Terminal_, _Console_ and _Shell_. Doesn't all mean the same? well, technically it doesn't.

@@ -9,7 +9,8 @@ const blog = defineCollection({
     slug: z.string(),
     author: z.string(),
     pubDate: z.coerce.date(),
-    tags: z.array(z.string())
+    tags: z.array(z.string()),
+    draft: z.boolean()
   }),
 });
 

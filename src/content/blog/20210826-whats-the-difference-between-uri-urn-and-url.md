@@ -4,6 +4,7 @@ slug: "whats-the-difference-between-uri-urn-and-url"
 author: reyes
 pubDate: 2021/08/26
 tags: ["tech", "web"]
+draft: false
 ---
 
 While browsing the web we encounter words like **URL**, this is a common tech term, but as we go deeper in the tech field, there's another terms that shows up, that's **URI** and the least common **URN**.
