@@ -16,10 +16,12 @@ import Navbar from "../components/shared/Navbar.astro";
         <title>Jorge Reyes</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </head>
-    <body class="bg-stone-900 bg-[url(/noise.png)]">
+    <body
+        class="bg-stone-900 bg-[url(/noise.png)] w-full max-w-dvw overflow-hidden"
+    >
         <div
             id="main-container"
-            class="hidden text-white font-light font-sans text-stone-50 max-w-3xl mx-auto py-10 px-4 grid grid-rows-[min-content,1fr,min-content] min-h-screen"
+            class="hidden text-white font-light font-sans text-stone-50 max-w-full lg:max-w-3xl mx-auto py-10 px-4 container grid grid-rows-[min-content,1fr,min-content] min-h-screen"
         >
             <Navbar />
             <slot />
