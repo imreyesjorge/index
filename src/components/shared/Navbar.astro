@@ -3,6 +3,7 @@ const { pathname } = Astro.url;
 
 const isHome = pathname === "/";
 const isWriting = pathname.includes("writing");
+const isPhotos = pathname.includes("photos");
 ---
 
 <nav class="mb-10">
@@ -13,6 +14,8 @@ const isWriting = pathname.includes("writing");
         <li>
             <a class={isWriting ? "underline" : ""} href="/writing">Writing</a>
         </li>
-        <li class="text-stone-500">Photos</li>
+        <li>
+            <a class={isPhotos ? "underline" : ""} href="/photos">Photos</a>
+        </li>
     </ul>
 </nav>
